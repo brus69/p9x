@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+{{- partial "head.html" . -}}
+</head>
+<!-- <style>
+     div, header, main, section, nav, footer {
+        border: 1px solid #ff0000;
+    } 
+</style> -->
+
+<body>
+
+
+
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm grid grid-cols-4 items-center border-b border-gray-200 px-2 ">
+    <!-- Логотип -->
+    <div class="ml-2 self-center">
+        {{- partial "logo.html" . -}}
+    </div>
+    
+    <!-- Основное меню -->
+    <ul class="flex gap-6 items-center justify-start">
+        <li>
+            <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors font-medium px-2 py-1 rounded-md hover:bg-blue-50">
+                Главная
+            </a>
+        </li>
+        <li>
+            <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors font-medium px-2 py-1 rounded-md hover:bg-blue-50">
+                Услуги
+            </a>
+        </li>
+        <li>
+            <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors font-medium px-2 py-1 rounded-md hover:bg-blue-50">
+                О нас
+            </a>
+        </li>
+        <li>
+            <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors font-medium  px-2 py-1 rounded-md hover:bg-blue-50">
+                Контакты
+            </a>
+        </li>
+    </ul>
+    
+    <!-- Поиск -->
+    <form class="flex items-center justify-end">
+        <div class="relative w-full max-w-md">
+            <input 
+                type="text" 
+                class="w-full rounded-full border border-gray-300 bg-gray-50 py-2 pl-4 pr-10 text-sm text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all" 
+                placeholder="Поиск..."
+            >
+            <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </button>
+        </div>
+    </form>
+</nav>
+
+
+<main class="grid grid-cols-[250px_0fr_280px] min-h-screen mt-[80px]">
+  <!-- Левая колонка (фиксированная ширина) -->
+  <div class="p-6 overflow-y-auto h-screen text-gray-500 sticky top-0 border-b-1 border-gray-500/10">
+  <ul>
+    <!-- ... остальные заголовки ... -->
+    {{ range .Site.RegularPages }}
+      <li class="p-1 hover:bg-gray-200 hover:p-1 hover:rounded-[4px] ">
+        <a href="{{ .RelPermalink }}" class=" text-[14px]">{{ .Params.menu_title | default .LinkTitle }}</a></li>
+    {{ end }}
+    
+    
+
+
+</ul>  
+</div>
+  
+  <!-- Центральная колонка (основной контент) -->
+  <div class="p-8 content-container border-l-1 border-gray-500/10 bg-gradient-to-r from-blue-50 to-purple-50 rounded-br-3xl">
+    
+    {{ .Content }}
+  </div> 
+  
+  <!-- Правая колонка (оглавление) -->
+  <div class="p-4 sticky top-0 h-screen overflow-y-auto">
+    <div class="table-of-contents w-full">
+      <!-- JavaScript вставит оглавление здесь -->
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const content = document.querySelector('.content-container');
+        const toc = document.querySelector('.table-of-contents');
+        
+        if (!content || !toc) return;
+
+        const headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        if (headings.length === 0) return;
+
+        const tocList = document.createElement('ul');
+        tocList.className = 'space-y-2 list-none pl-0 mt-4';
+        
+        headings.forEach(heading => {
+          if (!heading.id) {
+            heading.id = heading.textContent
+              .toLowerCase()
+              .replace(/[^\wа-яё\s]/g, '')
+              .replace(/\s+/g, '-');
+          }
+          
+          const li = document.createElement('li');
+          li.className = `border-l-2 border-gray-200 pl-2 ${getTocLevelClass(heading)}`;
+          
+          const a = document.createElement('a');
+          a.className = 'text-gray-700 hover:text-blue-600 text-sm transition-colors no-underline block py-1';
+          a.href = `#${heading.id}`;
+          a.textContent = heading.textContent;
+          
+          li.appendChild(a);
+          tocList.appendChild(li);
+        });
+
+        toc.innerHTML = '<h3 class="text-lg font-semibold">Содержание</h3>';
+        toc.appendChild(tocList);
+      });
+
+      function getTocLevelClass(heading) {
+        const level = heading.tagName.toLowerCase();
+        return {
+          'h2': 'ml-0',
+          'h3': 'ml-3',
+          'h4': 'ml-6',
+          'h5': 'ml-9',
+          'h6': 'ml-12'
+        }[level] || '';
+      }
+    </script>
+  </div>
+</main>
+   {{- partial "footer.html" . -}}
+</body>
+</html>

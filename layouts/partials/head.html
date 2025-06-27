@@ -1,0 +1,7 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ .Title }} | {{ .Site.Title }}454545545</title>
+{{ with resources.Get "css/output.css" }}
+ {{ $styles := . | minify | fingerprint }}
+ <link href="{{ $styles.RelPermalink }}" rel="stylesheet" integrity="{{ $styles.Data.Integrity }}">
+{{ end }}

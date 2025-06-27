@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Установка Hugo и Tailwind - красивый статический генератор сайтов на бесплатном хостинге от GitHub | My New Hugo Site454545545</title>
+
+ 
+ <link href="/css/output.min.8a66fa0d518379976f5357da9903b707b0c46bfcbf8641b21168953ca4e4ad48.css" rel="stylesheet" integrity="sha256-imb6DVGDeZdvU1famQO3B7DEa/y/hkGyEWiVPKTkrUg=">
+
+</head>
+
+
+<body>
+
+
+
+   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm grid grid-cols-4 items-center border-b border-gray-200 px-2 ">
+    
+    <div class="ml-2 self-center">    <svg class="fill-orange-500 hover:blur-2xl " version="1.0" xmlns="http://www.w3.org/2000/svg"
+      width="82pt" height="58pt" viewBox="0 0 550.000000 385.000000"
+      preserveAspectRatio="xMidYMid meet">
+      <g transform="translate(0.000000,385.000000) scale(0.100000,-0.100000)"
+         stroke="none">
+        <path d="M2780 3000 l0 -300 40 0 40 0 0 260 0 260 1165 0 1165 0 0 -1245 0
+        -1245 -1165 0 -1165 0 0 260 0 260 -40 0 -40 0 0 -300 0 -300 1245 0 1245 0 0
+        1325 0 1325 -1245 0 -1245 0 0 -300z"/>
+        <path d="M700 1975 l0 -635 145 0 145 0 0 245 0 245 383 0 c422 0 426 1 491
+        66 60 60 66 88 66 319 0 190 -2 214 -21 255 -25 56 -53 86 -104 113 -39 22
+        -49 22 -572 25 l-533 3 0 -636z m940 245 l0 -100 -325 0 -325 0 0 100 0 100
+        325 0 325 0 0 -100z"/>
+        <path d="M2320 2601 c-69 -22 -112 -58 -146 -121 -17 -31 -19 -60 -19 -260 0
+        -211 1 -227 22 -265 27 -51 68 -90 115 -109 32 -14 98 -16 438 -16 l400 0 0
+        -245 0 -245 145 0 145 0 0 536 c0 373 -3 548 -11 575 -16 50 -61 105 -112 132
+        -41 22 -48 22 -497 24 -250 1 -466 -2 -480 -6z m810 -381 l0 -100 -340 0 -340
+        0 0 100 0 100 340 0 340 0 0 -100z"/>
+        <path d="M3650 2607 c0 -1 99 -144 219 -317 l219 -314 -63 -91 c-34 -49 -133
+        -191 -219 -315 l-157 -225 172 -3 c97 -1 176 2 183 7 6 5 72 97 146 205 74
+        107 138 196 141 196 4 0 71 -92 149 -205 l143 -205 173 0 c96 0 174 2 174 4 0
+        3 -95 141 -211 308 -116 167 -214 308 -216 315 -3 7 92 151 211 322 119 170
+        216 312 216 315 0 3 -78 6 -174 6 l-174 0 -143 -205 c-78 -113 -145 -205 -149
+        -205 -3 0 -70 92 -148 205 l-143 205 -174 0 c-96 0 -175 -1 -175 -3z"/>
+      </g>
+    </svg></div>
+    
+    
+    <ul class="flex gap-6 items-center justify-start">
+        <li>
+            <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors font-medium px-2 py-1 rounded-md hover:bg-blue-50">
+                Главная
+            </a>
+        </li>
+        <li>
+            <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors font-medium px-2 py-1 rounded-md hover:bg-blue-50">
+                Услуги
+            </a>
+        </li>
+        <li>
+            <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors font-medium px-2 py-1 rounded-md hover:bg-blue-50">
+                О нас
+            </a>
+        </li>
+        <li>
+            <a href="#" class="text-gray-700 hover:text-blue-500 transition-colors font-medium  px-2 py-1 rounded-md hover:bg-blue-50">
+                Контакты
+            </a>
+        </li>
+    </ul>
+    
+    
+    <form class="flex items-center justify-end">
+        <div class="relative w-full max-w-md">
+            <input 
+                type="text" 
+                class="w-full rounded-full border border-gray-300 bg-gray-50 py-2 pl-4 pr-10 text-sm text-gray-800 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none transition-all" 
+                placeholder="Поиск..."
+            >
+            <button type="submit" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+            </button>
+        </div>
+    </form>
+</nav>
+
+
+<main class="grid grid-cols-[250px_0fr_280px] min-h-screen mt-[80px]">
+  
+  <div class="p-6 overflow-y-auto h-screen text-gray-500 sticky top-0 border-b-1 border-gray-500/10">
+  <ul>
+    
+    
+      <li class="p-1 hover:bg-gray-200 hover:p-1 hover:rounded-[4px] ">
+        <a href="/posts/motivation/" class=" text-[14px]">Tailwind и Hugo для блога</a></li>
+    
+    
+    
+
+
+</ul>  
+</div>
+  
+  
+  <div class="p-8 content-container border-l-1 border-gray-500/10 bg-gradient-to-r from-blue-50 to-purple-50 rounded-br-3xl">
+    
+    <h1 class="text-2xl font-bold mt-6 mb-2 text-orange-500">
+  Почему был выбран именно стек Tailwind и Hugo для блога
+</h1>
+
+
+
+ <p>На самом деле всё просто:</p>
+<ul>
+<li>
+<p><strong>Hugo</strong> - для создания статического сайта, так как нет желания переплачивать по несколько тысяч за хостинг (который с каждым годом всё дороже).
+Статические сайты можно размещать на бесплатных хостингах, например: <a href="https://pages.github.com/">GitHub Pages</a></p>
+</li>
+<li>
+<p><strong>Tailwind</strong> - мне сразу понравился, когда я увидел готовые компоненты и темы.
+Всё выглядит современно и аккуратно. В отличие от Bootstrap, который я использовал 10 лет в различных проектах - он уже поднадоел и выглядит топорно.
+Может для MVP и админок сойдёт, но в 2025 году с высокой конкуренцией,
+где сервисы борются за внимание пользователя, использовать Bootstrap в качестве витрины для своего сайта - архаизм.</p>
+</li>
+</ul>
+<p>Далее я буду описывать инструкции, как установить Hugo и Tailwind без всяких React, Vue, Angular и т.д.</p>
+<h2 class="text-2xl font-bold mt-6 mb-2 text-orange-500">
+  Установка и настройка
+</h2>
+
+
+
+ <p>Мой рабочий компьютер на Linux Ubuntu, с уже установленным Node.js (на этом останавливаться не буду). Все команды выполняю в терминале Linux.</p>
+<ol>
+<li>Создаем рабочую директорию (рекомендую такую же структуру):
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir Dev
+</span></span><span style="display:flex;"><span>cd Dev
+</span></span></code></pre></div></li>
+</ol>
+<p>Создаем новый сайт на Hugo:</p>
+<p>bash
+hugo new site marketolog-blog &ndash;format &ldquo;yaml&rdquo;
+Где:</p>
+<p>marketolog-blog - название проекта</p>
+<p>yaml - формат конфигурации (рекомендую, так как позже будет проще работать с docker-compose)</p>
+<p>Настраиваем Tailwind CSS:</p>
+<p>bash
+npm init -y
+npm install tailwindcss @tailwindcss/cli
+Создаем структуру для стилей:</p>
+<p>bash
+mkdir -p assets/css
+touch assets/css/input.css
+В файле input.css добавляем:</p>
+<p>css
+@import &ldquo;tailwindcss&rdquo;;
+Запускаем обработку Tailwind:</p>
+<p>bash
+npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css &ndash;watch
+Запускаем сервер Hugo:</p>
+<p>bash
+hugo server -D
+Создаем основной шаблон (layouts/index.html):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!doctype html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  {{ $css := resources.Get &#34;css/output.css&#34; | minify | fingerprint }}
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $css.RelPermalink }}&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $css.Data.Integrity }}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-3xl bg-amber-600 font-bold underline&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    Hello world!!
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">h1</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>Оптимизируем структуру:</p>
+<p>Создаем папку для частичных шаблонов:</p>
+<p>bash
+mkdir -p layouts/partials
+Выносим подключение стилей в отдельный файл (например, layouts/partials/head.html)</p>
+
+  </div> 
+  
+  
+  <div class="p-4 sticky top-0 h-screen overflow-y-auto">
+    <div class="table-of-contents w-full">
+      
+    </div>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const content = document.querySelector('.content-container');
+        const toc = document.querySelector('.table-of-contents');
+        
+        if (!content || !toc) return;
+
+        const headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
+        if (headings.length === 0) return;
+
+        const tocList = document.createElement('ul');
+        tocList.className = 'space-y-2 list-none pl-0 mt-4';
+        
+        headings.forEach(heading => {
+          if (!heading.id) {
+            heading.id = heading.textContent
+              .toLowerCase()
+              .replace(/[^\wа-яё\s]/g, '')
+              .replace(/\s+/g, '-');
+          }
+          
+          const li = document.createElement('li');
+          li.className = `border-l-2 border-gray-200 pl-2 ${getTocLevelClass(heading)}`;
+          
+          const a = document.createElement('a');
+          a.className = 'text-gray-700 hover:text-blue-600 text-sm transition-colors no-underline block py-1';
+          a.href = `#${heading.id}`;
+          a.textContent = heading.textContent;
+          
+          li.appendChild(a);
+          tocList.appendChild(li);
+        });
+
+        toc.innerHTML = '<h3 class="text-lg font-semibold">Содержание</h3>';
+        toc.appendChild(tocList);
+      });
+
+      function getTocLevelClass(heading) {
+        const level = heading.tagName.toLowerCase();
+        return {
+          'h2': 'ml-0',
+          'h3': 'ml-3',
+          'h4': 'ml-6',
+          'h5': 'ml-9',
+          'h6': 'ml-12'
+        }[level] || '';
+      }
+    </script>
+  </div>
+</main><footer class="bg-gray-100 text-gray-700 pt-12 pb-8 border-t border-gray-200 mt-10">
+  <div class="container mx-auto px-6 max-w-7xl">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+      
+      <div class="space-y-5">
+        <div class="flex items-center opacity-20 space-x-2">    <svg class="fill-orange-500 hover:blur-2xl " version="1.0" xmlns="http://www.w3.org/2000/svg"
+      width="82pt" height="58pt" viewBox="0 0 550.000000 385.000000"
+      preserveAspectRatio="xMidYMid meet">
+      <g transform="translate(0.000000,385.000000) scale(0.100000,-0.100000)"
+         stroke="none">
+        <path d="M2780 3000 l0 -300 40 0 40 0 0 260 0 260 1165 0 1165 0 0 -1245 0
+        -1245 -1165 0 -1165 0 0 260 0 260 -40 0 -40 0 0 -300 0 -300 1245 0 1245 0 0
+        1325 0 1325 -1245 0 -1245 0 0 -300z"/>
+        <path d="M700 1975 l0 -635 145 0 145 0 0 245 0 245 383 0 c422 0 426 1 491
+        66 60 60 66 88 66 319 0 190 -2 214 -21 255 -25 56 -53 86 -104 113 -39 22
+        -49 22 -572 25 l-533 3 0 -636z m940 245 l0 -100 -325 0 -325 0 0 100 0 100
+        325 0 325 0 0 -100z"/>
+        <path d="M2320 2601 c-69 -22 -112 -58 -146 -121 -17 -31 -19 -60 -19 -260 0
+        -211 1 -227 22 -265 27 -51 68 -90 115 -109 32 -14 98 -16 438 -16 l400 0 0
+        -245 0 -245 145 0 145 0 0 536 c0 373 -3 548 -11 575 -16 50 -61 105 -112 132
+        -41 22 -48 22 -497 24 -250 1 -466 -2 -480 -6z m810 -381 l0 -100 -340 0 -340
+        0 0 100 0 100 340 0 340 0 0 -100z"/>
+        <path d="M3650 2607 c0 -1 99 -144 219 -317 l219 -314 -63 -91 c-34 -49 -133
+        -191 -219 -315 l-157 -225 172 -3 c97 -1 176 2 183 7 6 5 72 97 146 205 74
+        107 138 196 141 196 4 0 71 -92 149 -205 l143 -205 173 0 c96 0 174 2 174 4 0
+        3 -95 141 -211 308 -116 167 -214 308 -216 315 -3 7 92 151 211 322 119 170
+        216 312 216 315 0 3 -78 6 -174 6 l-174 0 -143 -205 c-78 -113 -145 -205 -149
+        -205 -3 0 -70 92 -148 205 l-143 205 -174 0 c-96 0 -175 -1 -175 -3z"/>
+      </g>
+    </svg></div>
+        <p class="text-gray-600 leading-relaxed">
+          Профессиональные решения для вашего бизнеса. Надежность и качество с 2010 года.
+        </p>
+   
+      </div>
+
+      
+      <div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-5">Навигация</h3>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-gray-600 hover:text-gray-900 transition flex items-center">
+            Главная
+          </a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-900 transition flex items-center">
+            Услуги
+          </a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-900 transition flex items-center">
+            О нас
+          </a></li>
+          <li><a href="#" class="text-gray-600 hover:text-gray-900 transition flex items-center">
+            Контакты
+          </a></li>
+        </ul>
+      </div>
+
+      
+      <div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-5">Контакты</h3>
+        <address class="not-italic space-y-3 text-gray-600">
+          <div class="flex items-start">
+            <svg class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>г. Москва, ул. Примерная, 123</span>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+            <a href="tel:+71234567890" class="hover:text-gray-900 transition">+7 (123) 456-78-90</a>
+          </div>
+          <div class="flex items-center">
+            <svg class="w-5 h-5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <a href="mailto:info@example.com" class="hover:text-gray-900 transition">info@example.com</a>
+          </div>
+        </address>
+      </div>
+
+      
+      <div>
+        <h3 class="text-lg font-semibold text-gray-900 mb-5">Рассылка</h3>
+        <p class="text-gray-600 mb-4">Будьте в курсе наших новостей</p>
+        <form class="space-y-4">
+          <input 
+            type="email" 
+            placeholder="Ваш email" 
+            class="w-full px-4 py-2.5 rounded-lg bg-white border border-gray-300 focus:border-gray-400 focus:ring-1 focus:ring-gray-200 text-gray-700 placeholder-gray-400 focus:outline-none transition"
+          >
+          <button 
+            type="submit" 
+            class="w-full bg-gray-800 text-white py-2.5 px-6 rounded-lg font-medium hover:bg-gray-700 transition"
+          >
+            Подписаться
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <div class="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-500 text-sm order-2 md:order-1 mt-4 md:mt-0">© 2023 Компания. Все права защищены.</p>
+      <div class="flex space-x-6 order-1 md:order-2">
+        <a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition">Политика конфиденциальности</a>
+        <a href="#" class="text-gray-500 hover:text-gray-900 text-sm transition">Условия использования</a>
+      </div>
+    </div>
+  </div>
+</footer></body>
+</html>
