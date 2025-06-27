@@ -6,8 +6,15 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 26 Jun 2025 20:30:30 +0300</lastBuildDate>
+    <lastBuildDate>Sat, 28 Jun 2025 01:27:51 +0300</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Тут будет вторая статья</title>
+      <link>http://localhost:1313/posts/vt/</link>
+      <pubDate>Sat, 28 Jun 2025 01:27:51 +0300</pubDate>
+      <guid>http://localhost:1313/posts/vt/</guid>
+      <description>&lt;h1 class=&#34;text-2xl font-bold mt-6 mb-2 text-orange-500&#34;&gt;&#xA;  Заголовок 2&#xA;&lt;/h1&gt;&#xA;&#xA;&#xA;&#xA; &lt;p&gt;тут будет скоро текст&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Установка Hugo и Tailwind - красивый статический генератор сайтов на бесплатном хостинге от GitHub</title>
       <link>http://localhost:1313/posts/motivation/</link>

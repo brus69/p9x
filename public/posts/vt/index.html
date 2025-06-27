@@ -2,7 +2,7 @@
 <html>
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Установка Hugo и Tailwind - красивый статический генератор сайтов на бесплатном хостинге от GitHub | My New Hugo Site454545545</title>
+<title>Тут будет вторая статья | My New Hugo Site454545545</title>
 
  
  <link href="/css/output.min.8a66fa0d518379976f5357da9903b707b0c46bfcbf8641b21168953ca4e4ad48.css" rel="stylesheet" integrity="sha256-imb6DVGDeZdvU1famQO3B7DEa/y/hkGyEWiVPKTkrUg=">
@@ -107,81 +107,12 @@
   <div class="p-8 content-container border-l-1 border-gray-500/10 bg-gradient-to-r from-blue-50 to-purple-50 rounded-br-3xl">
     
     <h1 class="text-2xl font-bold mt-6 mb-2 text-orange-500">
-  Почему был выбран именно стек Tailwind и Hugo для блога
+  Заголовок 2
 </h1>
 
 
 
- <p>На самом деле всё просто:</p>
-<ul>
-<li>
-<p><strong>Hugo</strong> - для создания статического сайта, так как нет желания переплачивать по несколько тысяч за хостинг (который с каждым годом всё дороже).
-Статические сайты можно размещать на бесплатных хостингах, например: <a href="https://pages.github.com/">GitHub Pages</a></p>
-</li>
-<li>
-<p><strong>Tailwind</strong> - мне сразу понравился, когда я увидел готовые компоненты и темы.
-Всё выглядит современно и аккуратно. В отличие от Bootstrap, который я использовал 10 лет в различных проектах - он уже поднадоел и выглядит топорно.
-Может для MVP и админок сойдёт, но в 2025 году с высокой конкуренцией,
-где сервисы борются за внимание пользователя, использовать Bootstrap в качестве витрины для своего сайта - архаизм.</p>
-</li>
-</ul>
-<p>Далее я буду описывать инструкции, как установить Hugo и Tailwind без всяких React, Vue, Angular и т.д.</p>
-<h2 class="text-2xl font-bold mt-6 mb-2 text-orange-500">
-  Установка и настройка
-</h2>
-
-
-
- <p>Мой рабочий компьютер на Linux Ubuntu, с уже установленным Node.js (на этом останавливаться не буду). Все команды выполняю в терминале Linux.</p>
-<ol>
-<li>Создаем рабочую директорию (рекомендую такую же структуру):
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir Dev
-</span></span><span style="display:flex;"><span>cd Dev
-</span></span></code></pre></div></li>
-</ol>
-<p>Создаем новый сайт на Hugo:</p>
-<p>bash
-hugo new site marketolog-blog &ndash;format &ldquo;yaml&rdquo;
-Где:</p>
-<p>marketolog-blog - название проекта</p>
-<p>yaml - формат конфигурации (рекомендую, так как позже будет проще работать с docker-compose)</p>
-<p>Настраиваем Tailwind CSS:</p>
-<p>bash
-npm init -y
-npm install tailwindcss @tailwindcss/cli
-Создаем структуру для стилей:</p>
-<p>bash
-mkdir -p assets/css
-touch assets/css/input.css
-В файле input.css добавляем:</p>
-<p>css
-@import &ldquo;tailwindcss&rdquo;;
-Запускаем обработку Tailwind:</p>
-<p>bash
-npx @tailwindcss/cli -i ./assets/css/input.css -o ./assets/css/output.css &ndash;watch
-Запускаем сервер Hugo:</p>
-<p>bash
-hugo server -D
-Создаем основной шаблон (layouts/index.html):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!doctype html&gt;</span>
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1.0&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>  {{ $css := resources.Get &#34;css/output.css&#34; | minify | fingerprint }}
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $css.RelPermalink }}&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ $css.Data.Integrity }}&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">h1</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-3xl bg-amber-600 font-bold underline&#34;</span>&gt;
-</span></span><span style="display:flex;"><span>    Hello world!!
-</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">h1</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
-</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
-</span></span></code></pre></div><p>Оптимизируем структуру:</p>
-<p>Создаем папку для частичных шаблонов:</p>
-<p>bash
-mkdir -p layouts/partials
-Выносим подключение стилей в отдельный файл (например, layouts/partials/head.html)</p>
+ <p>тут будет скоро текст</p>
 
   </div> 
   
